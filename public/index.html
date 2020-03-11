@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prog209 Course Project</title>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="/public/stylesheets/index.css">
+
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="/public/javascripts/index.js"></script>
+</head>
+
+<body>
+
+    <!-- Start of Home page -->
+    <div data-role="page" id="home">
+        <!--  Home page header -->
+        <div data-role="header" data-theme='b'>
+            <h1>Open Concept Interior Design</h1>
+            <div data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a href="#home" class="ui-button-active">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--  Home page content -->
+        <div data-role="content" data-theme='b'>
+            <h2>Welcome to my interior design website. This website was inspired by
+                the interior design business that I'm starting for my Business class at
+                Bellevue college. When this website is finished it will display a list of services,
+                display customer reviews, intake new reviews, and allow prospective
+                customers to schedule a call with one our interior design consultants.
+            </h2>
+        </div>
+
+        <!--  Home page footer -->
+        <div data-role="footer" data-theme='b'>
+            <h4>Copyrigtht 2020 by Alejandra Valencia</h4>
+        </div>
+    </div>
+
+    <!-- Start of services page -->
+    <div data-role="page" id="services">
+        <!--  services page header -->
+        <div data-role="header" data-theme='b'>
+            <h1>Services</h1>
+            <div data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--  services page page content -->
+        <div data-role="content" data-theme='b'>
+            <p>Choose a service</p>
+            <!--<div class="btn-group">-->
+            <a href="#contact"><button id="kitchen" >Kitchen</button></a>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <div class="mySlides1">
+                    <img src="../images/kitchen1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides1">
+                    <img src="../images/kitchen2.jpg" style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+
+            </div>
+            <br>
+            <!-- End of slideshow container -->
+
+            <a href="#contact"><button id="bathroom">Bathroom</button></a>
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+                <div class="mySlides2">
+                    <img src="../images/bath1.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides2">
+                    <img src="../images/bath2.jpg" style="width:100%">
+                </div>
+
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- End of slideshow container -->
+        </div>
+        <!--  services page page footer -->
+        <div data-role="footer" data-theme='b'>
+            <h4>Copyrigtht 2020 by Alejandra Valencia</h4>
+        </div>
+    </div>
+
+    <!--  start of contact page -->
+    <div data-role="page" id="contact">
+        <!--  contact page header -->
+        <div data-role="header" data-theme='b'>
+            <h1>Contact Us</h1>
+            <div data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!--  contact page content -->
+        <div data-role="content" data-theme='b'>
+            <p>Submit the form below to schedule a consultation</p>
+            Name <br />
+            <input type="text" value="" id="name" />
+            Email <br />
+            <input type="text" value="" id="email" />
+            Phone<br />
+            <input type="number" value="" id="phone" />
+            Date <br />
+            <input type="date" value="" id="date" />
+            Time <br />
+            <input type="time" value="" id="time" />
+
+            <form>
+                <div class="ui-field-contain">
+                <label for="select-service">Select a service</label>
+                <select name="select-service" id="select-service">
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Bathroom">Bathroom</option>
+                </select>
+                </div>
+            </form>
+
+            <!--  submit & clear btns -->
+            <a href="#appointments" data-role="button" data-theme="a" id="buttonAdd" data-inline="true">Submit</a>
+            <input type="button" value="Clear" id="buttonClear" data-inline="true" />
+        </div>
+
+        <!--  contact page footer -->
+        <div data-role="footer" data-theme='b'>
+            <h4>Copyrigtht 2020 by Alejandra Valencia</h4>
+        </div>
+    </div>
+
+
+    <!-- Start of appointment page -->
+    <div data-role="page" id="appointments">
+        <!--  review page header -->
+        <div data-role="header" data-theme='b'>
+            <h1>Appointments</h1>
+            <div data-role="navbar" data-grid="c">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--  review appointment list content -->
+        <div data-role="content" data-theme='b'>
+            <p>we're in the appointment list</p>
+            <div id="apptList"></div>
+            <input type="button" value="Sort By Date" id="buttonSortDate" data-inline="true"  />
+            <br />
+            <br />
+        </div>
+
+        <!--  contact page footer -->
+        <div data-role="footer" data-theme='b'>
+            <h4>Copyrigtht 2020 by Alejandra Valencia</h4>
+        </div>
+    </div>
+
+
+    <!-- Start of  page -->
+    <div data-role="page"  id="detailPage">
+        <!--   page header -->
+        <div data-role="header" data-theme='a'> 
+            <h1>My Movies</h1>
+            <div data-role="header" data-theme='b'>
+                <h1>Appointments</h1>
+                <div data-role="navbar" data-grid="c">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#appointments">Appointments</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--  content -->
+        <div data-role="content" data-theme='d'>
+            <div>
+                <p id="IDparmHere" hidden>change1</p>  <!-- hidden    a place to stash the movie title -->
+                <p class="bold" > Here are the details</p>
+                <p> <span class="bold"> Name: </span> <span id="oneName" </span>  </p>
+                <p><span class="bold"> Email: </span> <span id="oneEmail" </span>  </p>
+                <p><span class="bold"> Phone: </span> <span id="onePhone" </span>  </p>
+                <p><span class="bold"> Date: </span> <span id="oneDate" </span>  </p>
+                <p><span class="bold"> Time: </span> <span id="oneTime" </span>  </p>
+
+            </div>
+        </div>
+            
+        <!--    footer -->
+        <div data-role="footer" data-theme='a'>
+            <h1>Copyrigtht 2020 by Kurt Friedrich</h1>
+        </div>
+   
+    </div>  
+
+
+     <!-- Start of  page -->
+     <div data-role="page"  id="refreshPage">
+        <!--  content -->
+         <div data-role="content" >
+               <!--  this page is used to to jump to and then back to a page to force a pagebeforeload event -->
+         </div>
+     </div>  
+</body>
+</html>
