@@ -90,7 +90,11 @@ function createList() {
   console.log(apptArray);
   apptArray.forEach(function (element, ) {   // use handy array forEach method
     var li = document.createElement('li');
-    li.innerHTML = element.Name + " " + element.Email + " " + element.Date + " " + element.Time;
+    li.innerHTML = "Name: " + element.Name + " " +
+                   "Email: " + element.Email + " " +
+                   "Phone: " + element.Phone + " " +
+                   "Date: " + element.Date + " " +
+                   "Time: " + element.Time;
     //"<a data-transition='pop' class='oneAppt' data-parm=" + element.Name + "  href='#detailPage'>Get Details </a> "  + element.Date + "  " + element.Time;
     ul.appendChild(li);
   });

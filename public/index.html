@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Prog209 Course Project</title>
 
-    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="/public/stylesheets/index.css">
-
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-
+    <link rel="stylesheet" href="themes/myTheme3.min.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="/public/javascripts/index.js"></script>
 </head>
 
@@ -21,7 +21,7 @@
     <div data-role="page" id="home">
         <!--  Home page header -->
         <div data-role="header" data-theme='b'>
-            <h1>Open Concept Interior Design</h1>
+            <h1>Home</h1>
             <div data-role="navbar" data-grid="c">
                 <ul>
                     <li><a href="#home" class="ui-button-active">Home</a></li>
@@ -33,12 +33,23 @@
         </div>
         <!--  Home page content -->
         <div data-role="content" data-theme='b'>
-            <h2>Welcome to my interior design website. This website was inspired by
-                the interior design business that I'm starting for my Business class at
-                Bellevue college. When this website is finished it will display a list of services,
-                display customer reviews, intake new reviews, and allow prospective
-                customers to schedule a call with one our interior design consultants.
-            </h2>
+            <h1>Alejandra's Beauty Bar</h1>            
+            <h3>Business Hours</h3>
+                <h4>Mon:	Closed
+                <br>Tue:	Closed
+                <br>Wed:	8:00 AM – 4:00 PM
+                <br>Thu:	8:00 AM – 8:00 PM
+                <br>Fri:	8:00 AM – 4:00 PM
+                <br>Sat:	7:30 AM – 3:00 PM
+                <br>Sun:	Closed</h4>
+            <h4>Contact</h4>
+            <p>(206)555-5555</p>
+            <h4>Address</h4>
+            <a href="https://www.google.com/maps/dir//Issaquah+Coffee+Company,+Northwest+Gilman+Boulevard,+Issaquah,+WA/@47.5395573,-122.1123532,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x54906f833cbef887:0xee8652a4466a9bde!2m2!1d-122.0423125!2d47.5395786"><button id="directions">Get Directions</button></a>
+            <p>100 3rd Ave NW
+            <br>Issaquah, WA 98027
+            <br>United States</p>
+
         </div>
 
         <!--  Home page footer -->
@@ -63,46 +74,30 @@
         </div>
         <!--  services page page content -->
         <div data-role="content" data-theme='b'>
-            <p>Choose a service</p>
+            <h2>Select a service</h2>
             <!--<div class="btn-group">-->
-            <a href="#contact"><button id="kitchen" >Kitchen</button></a>
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <div class="mySlides1">
-                    <img src="../images/kitchen1.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides1">
-                    <img src="../images/kitchen2.jpg" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-
-            </div>
+            <a href="#contact"><button id="women">Women's Haircut</button></a>
+            <h3><img src="../images/hair.jpg" style ="width: 50%;" align="middle">
+            Prices start at $50</h3>
+            
+            
             <br>
-            <!-- End of slideshow container -->
 
-            <a href="#contact"><button id="bathroom">Bathroom</button></a>
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <div class="mySlides2">
-                    <img src="../images/bath1.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides2">
-                    <img src="../images/bath2.jpg" style="width:100%">
-                </div>
-
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-            </div>
+            <a href="#contact"><button id="color">Color</button></a>
+            <h3><img src="../images/color.jpg" style ="width: 50%;">
+                Prices start at $100</h3>
             <br>
-            <!-- End of slideshow container -->
+
+            <a href="#contact"><button id="men">Men's Cuts</button></a>
+            <h3><img src="../images/menscut.jpg" style ="width: 50%;">
+                Prices start at $40</h3>
+            <br>
+
+            <a href="#contact"><button id="beard">Beard Trims</button></a>
+            <h3><img src="../images/beard.jpg" style ="width: 50%;">
+                Prices start at $25</h3>
+            <br>
+
         </div>
         <!--  services page page footer -->
         <div data-role="footer" data-theme='b'>
@@ -128,7 +123,7 @@
 
         <!--  contact page content -->
         <div data-role="content" data-theme='b'>
-            <p>Submit the form below to schedule a consultation</p>
+            <h2>Schedual an appointment</h2>
             Name <br />
             <input type="text" value="" id="name" />
             Email <br />
@@ -144,8 +139,10 @@
                 <div class="ui-field-contain">
                 <label for="select-service">Select a service</label>
                 <select name="select-service" id="select-service">
-                    <option value="Kitchen">Kitchen</option>
-                    <option value="Bathroom">Bathroom</option>
+                    <option value="women">Women's Cut</option>
+                    <option value="color">Color</option>
+                    <option value="men">Men's Cut</option>
+                    <option value="beard">Beard Trim</option>
                 </select>
                 </div>
             </form>
@@ -178,7 +175,7 @@
         </div>
         <!--  review appointment list content -->
         <div data-role="content" data-theme='b'>
-            <p>we're in the appointment list</p>
+            <h2>Appointments</h2>
             <div id="apptList"></div>
             <input type="button" value="Sort By Date" id="buttonSortDate" data-inline="true"  />
             <br />
@@ -214,7 +211,7 @@
             <div>
                 <p id="IDparmHere" hidden>change1</p>  <!-- hidden    a place to stash the movie title -->
                 <p class="bold" > Here are the details</p>
-                <p> <span class="bold"> Name: </span> <span id="oneName" </span>  </p>
+                <p><span class="bold"> Name: </span> <span id="oneName" </span>  </p>
                 <p><span class="bold"> Email: </span> <span id="oneEmail" </span>  </p>
                 <p><span class="bold"> Phone: </span> <span id="onePhone" </span>  </p>
                 <p><span class="bold"> Date: </span> <span id="oneDate" </span>  </p>
