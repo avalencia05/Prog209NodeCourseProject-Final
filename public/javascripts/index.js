@@ -90,11 +90,7 @@ function createList() {
   console.log(apptArray);
   apptArray.forEach(function (element, ) {   // use handy array forEach method
     var li = document.createElement('li');
-    li.innerHTML = "Name: " + element.Name + " " +
-                   "Email: " + element.Email + " " +
-                   "Phone: " + element.Phone + " " +
-                   "Date: " + element.Date + " " +
-                   "Time: " + element.Time;
+    li.innerHTML = "Name: " + element.Name + " " + "<a href='#detailPage'>Details </a> ";
     //"<a data-transition='pop' class='oneAppt' data-parm=" + element.Name + "  href='#detailPage'>Get Details </a> "  + element.Date + "  " + element.Time;
     ul.appendChild(li);
   });
@@ -174,24 +170,3 @@ function addNewAppt(newAppt) {
     });
 
 }; // end of addNewUser
-
-var slideIndex = [1, 1];
-var slideId = ["mySlides1", "mySlides2"]
-showSlides(1, 0);
-showSlides(1, 1);
-
-function plusSlides(n, no) {
-  showSlides(slideIndex[no] += n, no);
-}
-
-function showSlides(n, no) {
-  var i;
-  var x = document.getElementsByClassName(slideId[no]);
-  if (n > x.length) { slideIndex[no] = 1 }
-  if (n < 1) { slideIndex[no] = x.length }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  x[slideIndex[no] - 1].style.display = "block";
-
-}
